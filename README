@@ -1,0 +1,10 @@
+acts_as_tree_hacks
+------------------
+
+Adds the option to pass a :conditions parameter to the :children and :parent associations.
+
+Example:
+
+acts_as_tree :order => "position ASC, title ASC", :conditions => ['visible_in_menu = ?', true]
+
+This will make the #children and #parent methods only return those records which have "visible_in_menu = true"
